@@ -1,0 +1,44 @@
+<table class="table">
+	<thead>
+		<tr>
+			<th><a href="" ng-click="setCriteria('name')">Name</a></th>					
+			<th><a href="" ng-click="setCriteria('email')">Email</a></th>
+			<th><a href="" ng-click="setCriteria('number')">Number</a></th>
+			<th>Actions</th>
+			<th>&nbsp;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="contact in contactlist | filter:nameFilter | orderObjectBy : criteria : direction" class="record">
+			<td> 
+				<p editable-text="contact.name" e-name="name" e-form="rowform">
+		        	{{ contact.name || 'empty' }}
+		        </p>
+			</td>
+			<td>
+		        <p editable-text="contact.email" e-name="email" e-form="rowform">
+		        	{{ contact.email || 'empty' }}
+		        </p>
+	        </td>
+			<td>
+		        <p editable-text="contact.number" e-name="number" e-form="rowform">
+		        	{{ contact.number || 'empty' }}
+		        </p></td>
+			<td>
+				<!-- edit form -->
+		        <form editable-form name="rowform" ng-show="rowform.$visible" class="form-buttons form-inline" onaftersave="update($data, contact._id)">
+		          <button type="submit" ng-disabled="rowform.$waiting" class="btn btn-primary">
+		            <i class="fa fa-floppy-o"></i>
+		          </button>
+		          <button type="button" ng-disabled="rowform.$waiting" ng-click="rowform.$cancel()" class="btn btn-default">
+		            <i class="fa fa-times"></i>
+		          </button>
+		        </form>
+				<div class="buttons" ng-show="!rowform.$visible">
+		          <button class="btn btn-primary" ng-click="rowform.$show(edit(contact._id))"><i class="fa fa-pencil"></i></button>
+		          <button class="btn btn-danger" ng-click="remove(contact._id)"><i class="fa fa-trash-o"></i></button>
+		        </div> 
+	        </td>
+		</tr>
+	</tbody>
+</table>

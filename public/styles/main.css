@@ -1,0 +1,60 @@
+body{
+	background: url(../img/bg.jpg) no-repeat center center fixed #938172;
+	color: #C8C83C;
+	text-shadow: 1px 2px 1px #000;
+	font-family: 'Ubuntu', sans-serif;
+}
+.jumbotron{
+	text-align: center;
+	padding:23px;
+}
+.jumbotron h1{
+	color:#A03C28;
+	text-shadow:none;
+}
+.jumbotron p{
+	color:#505050;
+	text-shadow:none;
+}
+.contacts{
+	background: #eee;
+	border-radius: 9px;
+}
+.contacs-list{
+	width: 95%;
+	display: block;
+	margin: auto;
+	padding-bottom: 10px;
+}
+.nav-tabs{
+	
+}
+.nav-tabs>li{
+	margin-bottom:0;
+	width:25%;
+}
+.nav-tabs>li>a{
+	text-shadow:none;
+}
+.tab-content {
+	padding: 10px;
+	background: #fff;
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
+}
+table{
+	background: #505050;
+	border-radius: 9px;
+	margin:10px 0;
+}
+table, th{
+	text-align: center;
+}
+tr {
+	font-size: 150%;
+}
+tr.record:hover{
+	background: #F0F0C8;
+	color:#505050;
+	text-shadow:none;
+}

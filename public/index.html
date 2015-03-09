@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ContactListApp">
+<head>
+	<meta charset="UTF-8">
+	<title>Contact List App</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/xeditable.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container" ng-controller="AppCtrl">
+	<header ng-include="'partials/header.html'" scope="" onload=""></header>
+		<div class="contacts">
+			<div role="tabpanel">
+			  <!-- Nav tabs -->
+				<ul class="nav nav-tabs" role="tablist">
+					<li role="presentation" class="active"><a href="#search" aria-controls="search" role="tab" data-toggle="tab"><i class="fa fa-search"></i> Find Contact</a></li>
+					<li role="presentation"><a href="#add" aria-controls="add" role="tab" data-toggle="tab"><i class="fa fa-plus"></i> Add Contact</a></li>
+				</ul>
+			  <!-- Tab panes -->
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane fade in active" id="search"> <!-- first tab panel -->
+						<div class="row">
+							<div class="col-md-3">
+								<input type="text" ng-model="nameFilter" class="form-control" placeholder="Find a contact">
+							</div>
+							<div class="col-md-4"></div>
+						</div>
+					</div> <!-- end of first tab panel -->
+					<div role="tabpanel" class="tab-pane fade" id="add"> <!-- second tab panel -->
+						<div class="row">
+							<div class="col-md-3">
+								<input class="form-control" ng-model="contactS.name" placeholder="Name">		
+							</div>
+							<div class="col-md-3">
+								<input class="form-control" ng-model="contactS.email" placeholder="Email">
+							</div>
+							<div class="col-md-3">
+								<input class="form-control" ng-model="contactS.number" placeholder="Number">
+							</div>
+							<div class="col-md-3">
+								<button class="btn btn-primary" ng-click="addContact()"><i class="fa fa-user-plus"></i> Add Contact</button>
+							</div>
+						</div>	
+					</div> <!-- end of second tab panel -->
+				</div>
+			</div>
+			<div class="contacs-list" ng-include="'partials/contactlist.html'"></div>
+		</div>
+	</div> <!-- end of container -->
+	<!-- vendors -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.13/angular-ui-router.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<!-- my scripts -->
+	<script src="controllers/controller.js"></script>
+	<script src="scripts/ng-order-object-by.js"></script>
+	<script src="scripts/xeditable.min.js"></script>
+</body>
+</html>
