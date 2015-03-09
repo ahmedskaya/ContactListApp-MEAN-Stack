@@ -1,5 +1,5 @@
 # ContactListApp MEAN Stack
-#### A contact manager built with MongoDB, ExpressJS, AngularJS, NodeJS
+#### A contact manager application built with MongoDB, ExpressJS, AngularJS, NodeJS stack
 
 **Features:**
 ---------
