@@ -3,7 +3,7 @@
 
 **Features:**
 ---------
-	..* Single Page Application
-	..* Creat, Read, Update, Delete Contacts
-	..* Inline edit records
-	..* Sorting columns
+	.. * Single Page Application
+	.. * Create, Read, Update, Delete Contacts
+	.. * Inline edit records
+	.. * Sorting columns
